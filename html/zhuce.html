@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+
+
+
+
+
+
+        span::after,
+        span::before {
+            content: "";
+            position: absolute;
+
+            border-left: #c2c2c2 solid 2px;
+            border-bottom: #fafafa solid 2px;
+            width: 10px;
+            height: 10px;
+            transform: rotate(-45deg);
+            top: 0.9px;
+            left: -4px;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .bodybg {
+            background-image: url('../uploads/img/login.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            animation: bodybg 10s infinite linear;
+            z-index: -1;
+            transition: background-image 0.5s;
+
+        }
+
+        /* 
+        @keyframes bodybg {
+            0% {
+                background-color: white;
+            }
+
+            25% {
+                background-color: rgb(0, 156, 156);
+            }
+
+            50% {
+                background-color: rgb(0, 11, 130);
+            }
+
+            75% {
+                background-color: rgba(129, 0, 158, 0.649);
+            }
+
+
+        } */
+
+
+
+
+
+
+        /* @keyframes fly {
+
+            /* from {
+                transform: translatex(0px);
+                opacity: .6;
+            }
+
+            to {
+                transform: translatex(400px);
+                opacity: .8;
+            } 
+            0% {
+                transform: translate3d(0, 0, 0);
+
+            }
+
+            50% {
+                transform: translate3d(100px, 1000px, 1000px);
+            }
+
+
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
+        } */
+        header {
+            display: grid;
+        }
+
+        .box {
+            z-index: 999;
+
+            width: 300px;
+            background-color: white;
+            height: 370px;
+            padding: 30px;
+            border: solid black 4px;
+            border-radius: 10px;
+            position: relative;
+            display: grid;
+            top: 40%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            transition: border 5s, box-shadow 2s, background 2s;
+        }
+
+        h1 {
+            text-align: center;
+            line-height: 80px;
+            height: 80px;
+            margin-bottom: -30px;
+            transition: color 2.5s ease-out;
+        }
+
+        .input {
+            justify-self: center;
+            width: 100%;
+            justify-items: right;
+            padding: 10px;
+        }
+
+        .input input {
+            width: calc(100% - 60px);
+            height: 30px;
+            border-radius: 5px;
+            padding: 0 30px;
+            margin: 10px auto;
+
+        }
+
+        .input>input {
+            margin-bottom: 20px;
+
+        }
+
+        .box h4 {
+            text-align: left;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            transition: color 1s;
+        }
+
+        .box a {
+            color: black;
+            transition: color 1s;
+        }
+
+        #btn2 {
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            border-radius: 5px;
+            height: 40px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            transition: background 1s, boder 0.5s, color 1s;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+            margin-top: -30px;
+            transition: color 1s;
+        }
+
+        .box:hover {
+            border: solid 4px rgb(68, 130, 255);
+            box-shadow: 5px 2px 5px rgb(68, 130, 255);
+            background-color: rgba(22, 0, 79, 0.603);
+        }
+
+        b {
+            transition: color 1s;
+        }
+
+        #btn2:active {
+            cursor: wait;
+        }
+
+        .box:hover h1 {
+            color: rgb(255, 255, 255);
+        }
+
+        .box:hover h4 a {
+            color: white;
+        }
+
+        .box:hover #btn {
+            border: 3px solid rgb(68, 130, 255);
+            background-color: rgb(68, 130, 255);
+            color: white;
+        }
+
+        .box:hover #btn:hover {
+            background-color: white;
+            color: black;
+
+
+        }
+
+        .box:hover p {
+            color: white;
+        }
+
+        .box:hover b a {
+            color: aqua;
+        }
+
+        .input.error input {
+            border-color: #e74c3c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bodybg"></div>
+    <!-- <script>
+        let BG = [
+            './image/bg1.webp',
+            './image/bg2.webp'
+
+        ]
+        let i = 0
+        setInterval(function () {
+            // 需要限制不相同（随机数可能会一样）
+            // let i = Math.floor(Math.random() * BG.length)
+            // document.querySelector('.bodybg').style.backgroundImage = "url('" + BG[i] + "')"
+
+            document.querySelector('.bodybg').style.backgroundImage = "url('" + BG[i] + "')"
+            i++
+            if (i == BG.length) {
+                i = 0
+            }
+        }, 3000)
+    </script> -->
+
+
+    <header>
+
+        <div class="box">
+            <h1>注册</h1>
+            <div class="input">
+                <form method="get" onsubmit="return handleSubmit(event)">
+                    <input type="text" placeholder="账号" name="Username" required id="UsernameZhuce">
+                    <input type="password" placeholder="密码" name="Password" required id="PasswordZhuce">
+                    <input type="password" placeholder="再次输入密码" name="yesPassword" required id="yesPassword">
+                    <h4 class="help"><a href="javascript:;">需要帮助？</a></h4>
+                    <input type="submit" value="提交" id="btn2">
+                </form>
+            </div>
+
+
+            <p>已有账号？<b class="button"><a href="login.html">点击这里</a></b></p>
+
+        </div>
+
+    </header>
+    <script type="text/javascript" src="../js/login.js"></script>
+</body>
+
+</html>
