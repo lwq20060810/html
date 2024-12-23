@@ -27,8 +27,9 @@ shoukuanmaA1.addEventListener("click", function () {
     shoukuanmaLodin.style.display = "block";
     shoukuanmaA2.style.display = "none";
     shoukuanmaA1.style.display = "none";
-    setTimeout(() => {
+    let dsq = setTimeout(() => {
         shoukuanmaLodin.style.display = "none";
+        clearInterval(dsq)
     }, 1500);
     jiading = true
     if (jiading) {
@@ -43,8 +44,9 @@ shoukuanmaA2.addEventListener("click", function () {
     shoukuanmaLodin.style.display = "block";
     shoukuanmaA2.style.display = "none";
     shoukuanmaA1.style.display = "none";
-    setTimeout(() => {
+    let dsq = setTimeout(() => {
         shoukuanmaLodin.style.display = "none";
+        clearInterval(dsq)
     }, 1500);
 });
 btn1.addEventListener("click", function () {
@@ -67,11 +69,12 @@ btn2.addEventListener("click", function () {
     // }
     shoukuanma.style.display = "flex";
     shoukuanmaP.innerHTML = "请支付15.9￥";
-    setInterval(() => {
+    let dsq = setInterval(() => {
         shoukuanmaP.innerHTML = "请确认是否充值成功";
         shoukuanmaP.style.bottom = "-50%"
         shoukuanmaA1.style.display = "flex";
         shoukuanmaA2.style.display = "flex";
+        clearInterval(dsq)
     }, 5000);
 });
 btn3.addEventListener("click", function () {
@@ -84,11 +87,12 @@ btn3.addEventListener("click", function () {
     // }
     shoukuanma.style.display = "flex";
     shoukuanmaP.innerHTML = "请支付39.9￥";
-    setInterval(() => {
+    let dsq = setInterval(() => {
         shoukuanmaP.innerHTML = "请确认是否充值成功";
         shoukuanmaP.style.bottom = "-50%"
         shoukuanmaA1.style.display = "flex";
         shoukuanmaA2.style.display = "flex";
+        clearInterval(dsq)
     }, 5000);
 });
 btn4.addEventListener("click", function () {
@@ -101,10 +105,12 @@ btn4.addEventListener("click", function () {
     // }
     shoukuanma.style.display = "flex";
     shoukuanmaP.innerHTML = "请支付119.9￥";
-    setInterval(() => {
+    let dsq = setInterval(() => {
         shoukuanmaP.innerHTML = "请确认是否充值成功";
         shoukuanmaP.style.bottom = "-50%"
         shoukuanmaA1.style.display = "flex";
         shoukuanmaA2.style.display = "flex";
+        clearInterval(dsq)
     }, 5000);
 });
+
