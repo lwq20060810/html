@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    height: 10vh;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.input-container input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #333;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 5vh;
+
+
+}
+
+a {
+    color: black;
+}
+
+.input-container button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    width: 7vh;
+    height: 6vh;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.kuang {
+    width: 3vh;
+    height: 3vh;
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+    transform: rotate(45deg);
+    top: 22vh;
+    position: fixed;
+    right: 38vw;
+    transition: 0.5s;
+}
+
+.kuang-bg {
+    width: 6vh;
+    height: 6.5vh;
+
+
+    top: 19.5vh;
+    position: fixed;
+    right: 37.15vw;
+
+}
+
+.kuang-bg:hover {
+    width: 15vh;
+}
+
+.kuang-bg:hover .kuang {
+    transform: rotate(-135deg);
+    top: 20vh;
+}
+
+.input-container ul li:hover,
+.input-container ul li:hover a {
+    background-color: #000000;
+    color: white;
+}
+
+.input-container ul {
+    display: none;
+    top: 19.5vh;
+    right: 37vw;
+    list-style: none;
+    margin-top: 50px;
+    margin-left: 10vw;
+    position: fixed;
+    background-color: rgba(209, 255, 255, 0.794);
+    width: 20vw;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.input-container ul li {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    height: 5vh;
+    line-height: 5vh;
+    color: #333;
+
+}
+
+.input-container ul h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    height: 100%;
+    width: 30vw;
+    margin: 0 0 0 80%;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+
+
+    align-content: center;
+}
+
+header nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+.container-h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20vh;
+
+}
+
+.container-h1 h1 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+body {
+    background-image: url('../uploads/helpBG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
