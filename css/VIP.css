@@ -91,7 +91,7 @@
 
  .vip-content2 ul li {
 
-     left: calc(var(--y) * 1% + 120px);
+     left: calc(var(--y) * 1% + 11vw);
      position: absolute;
      font-size: 15px;
      font-weight: bold;
@@ -136,7 +136,9 @@
      margin: 0 auto;
      display: grid;
      list-style: none;
-     grid-gap: 10px;
+     grid-gap: 10px; 
+     
+    
      justify-self: center;
      align-self: center;
  }
@@ -296,7 +298,6 @@
      display: none;
 
  }
-
  .lodin span {
      position: absolute;
      width: 50px;
@@ -328,4 +329,80 @@
      line-height: 50vh;
      text-align: center;
 
+ }
+ @media screen and (min-width:1629px) {
+    .loader-inner ol {
+        margin: 0 auto;
+        display: grid;
+        list-style: none;
+        
+        grid-gap: 30px; 
+       
+        justify-self: center;
+        align-self: center;
+    }
+    
+ }
+ @media  (min-width:1077px) and (max-width:1441px) {
+    .shoukuanma p {
+        background: none;
+        color: white;
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 70px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: -30%;
+        
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 20vw;
+    }
+ }
+ @media  (min-width:390px) and (max-width:1077px) {
+    .shoukuanma p {
+        background: none;
+        color: white;
+        font-size: 1em;
+        text-align: center;
+        margin-top: 70px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: -30%;
+        
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 20vw;
+        
+    }
+    .shoukuanma::before {
+        content: "请扫描该二维码完成支付";
+        color: white;
+        text-align: center;
+        font-size: 1em;
+        line-height: 100px;
+        width: 80vw;
+        height: 80vh;
+        position: fixed;
+   
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+    .loader-inner ol li {
+        text-align: center;
+        line-height: 30px;
+        font-size: 10px;
+    }
+    .loader-inner button {
+        background-color: #2f4548;
+        color: white;
+        width: 15vw;
+        text-align: center;
+        justify-self: center;
+        padding: 5px 5px;
+       font-size: 4px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
  }
